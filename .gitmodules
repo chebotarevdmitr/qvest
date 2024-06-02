@@ -1,0 +1,3 @@
+[submodule "qvest"]
+	path = qvest
+	url = https://github.com/chebotarevdmitr/qvest.git
