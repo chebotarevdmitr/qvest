@@ -1,11 +1,11 @@
 ﻿#include <iostream>
-#include <vector>
+#include <array>
 
 int main()
 {
-    std::cout <<" \tHello qvest!\n";
-    std::vector<int> v(22);
-    bool b =(v[6]);
-    printf("%d",!b);
+    std::array<int, 1> a = { 0 };
+    std::array<int, 1>b = a;
+
+    std::cout << (a == b) << ", " << (&a == &b) << std::endl;
     return 0;
 }
