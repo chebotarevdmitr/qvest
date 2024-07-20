@@ -1,23 +1,33 @@
 ﻿#include <iostream>
-#include <algorithm>
 #include <vector>
 #include <string>
 using namespace std;
 
-vector<int>Sort(vector<int>v){
-	sort(begin(v),end(v));
-	return v;
+struct Person{
+  string name;
+  string surname;
+  int age;		
+};
+
+vector<Person> GetMoscowPopulation() {
+    vector<Person> moscowPopulation = {
+        { "Ivan", "Ivanov", 28 },
+        { "Petr", "Petrov", 30 }
+    };
+    return moscowPopulation;
+}
+ 
+void PrintPopulationSize(const vector<Person>& p){
+    cout << "There are " << p.size() << " people in Moscow " << endl;
 }
 
 int main() {
- vector<int>nums = {3,4,1,0,2,5};
- nums= Sort(nums);
- for(auto x :nums){
- 	cout<<x<<" ";
- }
-   system("pause>0") ;
+    vector<Person> people = GetMoscowPopulation();
+    PrintPopulationSize(people);
+    system("pause>0");
     return 0;
 }
+
 
 
 
