@@ -1,11 +1,23 @@
 ﻿#include <iostream>
-#include <array>
+using namespace std;
 
-int main()
-{
-    std::array<int, 1> a = { 0 };
-    std::array<int, 1>b = a;
+void Swap (int x,int y){
+	int tmp =x;
+	x=y;
+	y=tmp;
+}
 
-    std::cout << (a == b) << ", " << (&a == &b) << std::endl;
+int main() {
+	int a=1;
+	int b=2;
+  Swap(a,b) ;
+
+ cout<< "a== "<<a<<"\n";
+ cout<< "b== "<<b<<"\n";
+ 
+   system("pause>0") ;
     return 0;
 }
+
+
+
