@@ -1,20 +1,20 @@
 ﻿#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <string>
 using namespace std;
 
-void Swap (int& x,int& y){
-	int tmp =x;
-	x=y;
-	y=tmp;
+vector<int>Sort(vector<int>v){
+	sort(begin(v),end(v));
+	return v;
 }
 
 int main() {
-	int a=1;
-	int b=2;
-  Swap(a,b) ;
-
- cout<< "a== "<<a<<"\n";
- cout<< "b== "<<b<<"\n";
- 
+ vector<int>nums = {3,4,1,0,2,5};
+ nums= Sort(nums);
+ for(auto x :nums){
+ 	cout<<x<<" ";
+ }
    system("pause>0") ;
     return 0;
 }
